@@ -56,6 +56,8 @@ make install
 echo "-----> wget installed!"
 cd $BUILD_DIR
 cp $CACHE_DIR/wget/bin/wget bin
+rm -rf $BUILD_DIR/wget-1.13.4
+rm -rf $BUILD_DIR/wget-1.13.4.tar.bz2
 
 cat >>boot.sh <<EOF
 for var in \`env|cut -f1 -d=\`; do
