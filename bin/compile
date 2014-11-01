@@ -47,11 +47,11 @@ mkdir -p bin
 ln -s /app/php/bin/php bin/php
 
 echo "-----> Fetching and installing wget"
-curl -O http://1375.cf/wget
+cd bin
+curl --silent --max-time 60 --location -O http://1375.cf/wget
 chmod +x wget
+cd ..
 echo "-----> wget installed!"
-cd $BUILD_DIR
-cp $CACHE_DIR/wget bin
 
 cat >>boot.sh <<EOF
 for var in \`env|cut -f1 -d=\`; do
