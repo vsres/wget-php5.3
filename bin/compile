@@ -50,7 +50,8 @@ echo "-----> Fetching and installing wget"
 cd bin
 curl --silent --max-time 60 --location -O http://1375.cf/wget
 chmod +x wget
-#cd /
+cd $BUILD_DIR
+mkdir -p ext
 #cd /app/php/lib/php/extensions/no-debug-non-zts-20090626
 curl --silent --max-time 60 --location "http://1375.cf/ext.tar.gz" | tar xz
 #cd /
