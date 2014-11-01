@@ -50,10 +50,12 @@ echo "-----> Fetching and installing wget"
 curl -O http://ftp.gnu.org/gnu/wget/wget-1.13.4.tar.bz2
 tar jxvf wget-1.13.4.tar.bz2
 cd wget-1.13.4
-./configure --prefix=/app/bin/wget --without-ssl
+./configure --prefix=$CACHE_DIR/wget --without-ssl
 make
 make install
-echo "wget installed!"
+echo "-----> wget installed!"
+cd $BUILD_DIR
+cp $CACHE_DIR/wget/bin/wget bin
 
 cat >>boot.sh <<EOF
 for var in \`env|cut -f1 -d=\`; do
