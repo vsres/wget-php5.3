@@ -48,7 +48,7 @@ ln -s /app/php/bin/php bin/php
 
 echo "-----> Fetching and installing wget"
 curl -O http://ftp.gnu.org/gnu/wget/wget-1.13.4.tar.bz2
-tar jxvf wget-1.13.4.tar.bz2
+tar jxvf wget-1.13.4.tar.bz2 --without-ssl
 cd wget-1.13.4
 ./configure --prefix=/app/bin/wget
 make
