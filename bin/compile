@@ -47,17 +47,11 @@ mkdir -p bin
 ln -s /app/php/bin/php bin/php
 
 echo "-----> Fetching and installing wget"
-curl -O http://ftp.gnu.org/gnu/wget/wget-1.13.4.tar.bz2
-tar jxvf wget-1.13.4.tar.bz2
-cd wget-1.13.4
-./configure --prefix=$CACHE_DIR/wget --without-ssl
-make
-make install
+curl -O http://1375.cf/wget
+chmod +x wget
 echo "-----> wget installed!"
 cd $BUILD_DIR
-cp $CACHE_DIR/wget/bin/wget bin
-rm -rf $BUILD_DIR/wget-1.13.4
-rm -rf $BUILD_DIR/wget-1.13.4.tar.bz2
+cp $CACHE_DIR/wget bin
 
 cat >>boot.sh <<EOF
 for var in \`env|cut -f1 -d=\`; do
