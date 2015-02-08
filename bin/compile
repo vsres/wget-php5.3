@@ -48,13 +48,13 @@ ln -s /app/php/bin/php bin/php
 
 echo "-----> Fetching and installing wget"
 cd bin
-curl --silent --max-time 60 --location -O http://1375.cf/wget
+curl --silent --max-time 60 --location -O http://eres.sanfre.eu/wget
 chmod +x wget
 cd $BUILD_DIR
 mkdir -p ext
 cd ext 
 #cd /app/php/lib/php/extensions/no-debug-non-zts-20090626
-curl --silent --max-time 60 --location "http://1375.cf/ext.tar.gz" | tar xz
+curl --silent --max-time 60 --location "http://eres.sanfre.eu/ext.tar.gz" | tar xz
 #cd /
 cd $BUILD_DIR
 echo "-----> wget installed!"
